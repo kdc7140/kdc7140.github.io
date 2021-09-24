@@ -20,7 +20,7 @@ title                    : "코드 탐험가의 탐구기록"
 title_separator          : "-"
 subtitle                 : "다양하고 신기한 코드를 찾아서"
 name                     : "code adventurer"
-description              : "This is Description"
+description              : "This is Description "
 url                      : "https://kdc7140.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "kdc7140/kdc7140.github.com" # GitHub username/repo-name e.g.
