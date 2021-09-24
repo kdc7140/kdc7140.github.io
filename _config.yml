@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "기억 상자"
+title                    : "코드 탐험가의 탐구기록"
 title_separator          : "-"
-subtitle                 : "SubTitle"
+subtitle                 : "다양하고 신기한 코드를 찾아서"
 name                     : "code adventurer"
 description              : "This is Description"
 url                      : "https://kdc7140.github.io"
@@ -26,7 +26,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "kdc7140/kdc7140.github.com" # GitHub username/repo-name e.g.
 teaser                   : #"/assets/images/developer1.png"
 logo                     : "/assets/images/developer1.png"
-masthead_title           : "Blog Title"
+masthead_title           : "나는 오늘도 공부한다"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -101,9 +101,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "코드 탐험가"
+  name             : "DC Kim"
   avatar           : "/assets/images/developer2.png"
-  bio              : "세상의 다양하고 신기한 코드들을 찾아서"
+  bio              : "잘부탁드립니다."
   location         : "Seoulk, Korea"
   email            : "ghk5402@gmail.com"
   links:
