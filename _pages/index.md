@@ -2,5 +2,5 @@
 title: ""
 layout: home
 permalink: /index/
-author_profile: true
+#author_profile: true
 ---
