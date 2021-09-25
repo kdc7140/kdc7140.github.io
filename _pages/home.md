@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/notebook.jpg
   actions:
     - label: "<i class='fas fa-download'></i> Install now"
-      url: "index"
+      url: "/index/"
 excerpt: >
   오늘도 흥미로운 이야기를 찾아<br />
   <small><a href="https://github.com/kdc7140">github Address</a></small>
