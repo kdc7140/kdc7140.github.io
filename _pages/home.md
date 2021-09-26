@@ -28,5 +28,21 @@ feature_row:
     url: "/docs/configuration/"
     btn_class: "btn—primary"
     btn_label: "Learn more"
+
+  - image_path: /assets/images/developer1.png
+    alt: "kdc2"
+    title: "Posting No.2"
+    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    url: "/docs/configuration/"
+    btn_class: "btn—primary"
+    btn_label: "Learn more"
+
+  - image_path: /assets/images/developer1.png
+    alt: "kdc2"
+    title: "Posting No.2"
+    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    url: "/docs/configuration/"
+    btn_class: "btn—primary"
+    btn_label: "Learn more"
 ---
 {% include feature_row %}
