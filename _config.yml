@@ -101,10 +101,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "DC Kim"
+  name             : "MOYA"
   avatar           : "/assets/images/study.png"
-  bio              : "잘부탁드립니다."
-  location         : "Seoulk, Korea"
+  bio              : "재미를 추구하는 개발자 MOYA 입니다."
+  location         : "Seoul, Korea"
   email            : "ghk5402@gmail.com"
   links:
     - label: "Email"
