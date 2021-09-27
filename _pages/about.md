@@ -4,6 +4,6 @@ permalink: /about/
 layout: single
 ---
 
-## 김동창 블로그임
+## 새로만든 블로그
 
-블로그임 ㅋㅋ;;
+About!!
