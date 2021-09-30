@@ -14,27 +14,28 @@ excerpt: >
 feature_row:
   - image_path: /assets/images/notebook.jpg
     alt: "kdc1"
-    title: "Posting No.1"
-    excerpt: "detal"
-    url: "/docs/configuration/"
-    btn_class: "btn—primary"
+    title: "초보자도 할 수 있는 Git 블로그 만들기(1)"
+    excerpt: "계정 및 Repository 생성"
+    url: "program%20guide/makeBlog1"
+    btn_class: "btn1 btn—primary"
     btn_label: "Learn more"
-    btn_url : "/index/"
+    ##btn_url : "/index/"
 
   - image_path: /assets/images/notebook.jpg
     alt: "kdc2"
-    title: "Posting No.2"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
-    btn_class: "btn—primary"
+    title: "초보자도 할 수 있는 Git 블로그 만들기(2)"
+    excerpt: "블로그 실행 & 테마 적용하기"
+    url: "program%20guide/makeBlog2"
+    btn_class: "btn1 btn—primary"
     btn_label: "Learn more"
 
   - image_path: /assets/images/notebook.jpg
     alt: "kdc2"
-    title: "Posting No.3"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
-    btn_class: "btn—primary"
+    title: "초보자도 할 수 있는 Git 블로그 만들기(3)"
+    excerpt: "로컬 환경설정하기"
+    url: "program%20guide/makeBlog3"
+    btn_class: "btn1 btn—primary"
     btn_label: "Learn more"
 ---
+
 {% include feature_row %}
