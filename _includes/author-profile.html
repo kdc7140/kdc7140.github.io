@@ -56,6 +56,11 @@
         </li>
       {% endif %}
 
+      <br/><br/>
+      {% if page.sidebar_main %}
+      {% include nav_list_main %}
+      {% endif %}
+
       {% if author.keybase %}
         <li>
           <a href="https://keybase.io/{{ author.keybase }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
