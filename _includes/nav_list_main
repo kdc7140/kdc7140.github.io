@@ -22,6 +22,15 @@
                 {% endif %}
             {% endfor %}
         </ul>
+        <ul>
+            <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+            <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+            {% for category in site.categories %}
+                {% if category[0] == "Tool" %}
+                    <li><a href="/categories/tool" class="">Tool ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
 
         <span class="nav__sub-title">Coding Test</span>
         <ul>
@@ -36,7 +45,7 @@
         <ul>
             {% for category in site.categories %}
                 {% if category[0] == "study" %}
-                    <li><a href="/categories/study" class="">Coding Test ({{category[1].size}})</a></li>
+                    <li><a href="/categories/study" class="">Study ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
