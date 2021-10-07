@@ -69,3 +69,30 @@ ID와 Email을 입력하고 다음버튼을 누릅니다.
 모든 설치절차를 마치고 아래와 같이 SourceTree가 실행되면 설치 완료입니다.
 
 <img src="/assets/images/sourceTree.PNG"><br/><br/>
+
+
+### 2. SourceTree 사용법
+
+
+설치를 완료 했으니 사용법에 대해 간략히 알아보도록 하겠습니다.
+SourceTree를 실행하면 상단에 Local, Remote / Clone, Add, Create 5개의 메뉴가 있습니다.
+
+* Local : 로컬 저장소로 .git폴더가 있는 리스트를 보여줍니다.
+* Remote : 원격저장소의 리스트를 보여줍니다.
+* Clone : Repository를 로컬로 복사합니다.
+* Add : 기존 저장소를 추가합니다.
+* Create : 새로운 저장소를 만듭니다.
+  
+
+<img src="/assets/images/st_main.PNG"><br/><br/>
+
+
+Github에 Repository를 새로 생성해서 Clone으로 로컬에 복사해보도록 하겠습니다.
+Github 사이트에 접속해서 Repositories 버튼을 클릭하고 우측의 New 버튼을 눌러줍니다.
+
+<img src="/assets/images/git_repo.PNG"><br/><br/>
+
+
+Repository명을 입력하고 Add a README file 체크 후 생성해줍니다
+
+<img src="/assets/images/create_repo.PNG"><br/><br/>
