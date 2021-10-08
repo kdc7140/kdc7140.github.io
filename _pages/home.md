@@ -14,7 +14,7 @@ excerpt: >
 feature_row:
   - image_path: /assets/images/main_1.PNG
     alt: "kdc1"
-    title: "[Git]초보자도 할 수 있는 Github 블로그 만들기(1)"
+    title: "[Git]초보자도 할 수 있는 Github 블로그 만들기 (1)"
     excerpt: "계정 및 Repository 생성"
     url: "guide/makeBlog1/"
     btn_class: "btn1 btn—primary"
@@ -23,7 +23,7 @@ feature_row:
 
   - image_path: /assets/images/main_1.PNG
     alt: "kdc2"
-    title: "[Git]초보자도 할 수 있는 Github 블로그 만들기(2)"
+    title: "[Git]초보자도 할 수 있는 Github 블로그 만들기 (2)"
     excerpt: "블로그 실행 & 테마 적용하기"
     url: "guide/makeBlog2/"
     btn_class: "btn1 btn—primary"
@@ -31,7 +31,7 @@ feature_row:
 
   - image_path: /assets/images/main_1.PNG
     alt: "kdc2"
-    title: "[Git]초보자도 할 수 있는 Github 블로그 만들기(3)"
+    title: "[Git]초보자도 할 수 있는 Github 블로그 만들기 (3)"
     excerpt: "로컬 환경설정하기"
     url: "guide/makeBlog3/"
     btn_class: "btn1 btn—primary"
