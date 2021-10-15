@@ -48,18 +48,19 @@ arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차�
 <br/>
 **** 작성 코드 ****
 
-    function solution(arr, divisor) {
-      var answer = [];
-      
-      arr.forEach((el) => {
-        el%divisor == 0 ? answer.push(el) : "";
-      });
-      
-      answer.length == 0 ? answer.push(-1) : answer.sort((a,b) => a-b);
-      
-      return answer;
-  }
-
+```java
+function solution(arr, divisor) {
+  var answer = [];
+  
+  arr.forEach((el) => {
+    el%divisor == 0 ? answer.push(el) : "";
+  });
+  
+  answer.length == 0 ? answer.push(-1) : answer.sort((a,b) => a-b);
+  
+  return answer;
+}
+```
 
 <br/>
 **코드 풀이**

@@ -52,42 +52,44 @@ solution 함수의 매개변수로 다리에 올라갈 수 있는 트럭 수 bri
 
 **** 작성코드 ****
 
-    function solution(bridge_length, weight, truck_weights) {
-      var answer = 0;
-      var comArr = [];
-      var ingArr = [];
-      const wegLen = truck_weights.length;
-      
-      //reduce 사용을 위해 배열길이만큼 0 추가
-      for(var i=0; i<bridge_length; i++){
-          ingArr.push(0);
-      }
-      
-      while(true){
-          //다리를 지난트럭 배열길이가 처음 대기트럭 배열 길이와 동일하면 반복 종료
-          if(comArr.length == wegLen){
-              break;
-          }else{
-              //다리를 건너는 트럭이 마지막에 도달하면 다리를 지난트럭 배열에 추가
-              if(ingArr[0] != 0){
-                  comArr.push(ingArr[0]);   
-              }
-              //다리를 건넜으니 다리를 건너는 트럭배열에서 첫번째 값 제거
-              ingArr.shift();
-              
-              //다리를 건너고 있는 트럭무게와 대기중인 첫번째 트럭무게의 합이 weight 보다 작거나 같을경우
-              //대기중인 첫번째 트럭이 다리를 건넘
-              if(ingArr.reduce((a, b) => a + b)+truck_weights[0] <= weight){
-                  ingArr.push(truck_weights[0]);
-                  truck_weights.shift();
-              }else{
-                  ingArr.push(0);
-              }
-          }
-          answer += 1;
-      }
-      return answer;
+```java
+function solution(bridge_length, weight, truck_weights) {
+    var answer = 0;
+    var comArr = [];
+    var ingArr = [];
+    const wegLen = truck_weights.length;
+    
+    //reduce 사용을 위해 배열길이만큼 0 추가
+    for(var i=0; i<bridge_length; i++){
+        ingArr.push(0);
     }
+    
+    while(true){
+        //다리를 지난트럭 배열길이가 처음 대기트럭 배열 길이와 동일하면 반복 종료
+        if(comArr.length == wegLen){
+            break;
+        }else{
+            //다리를 건너는 트럭이 마지막에 도달하면 다리를 지난트럭 배열에 추가
+            if(ingArr[0] != 0){
+                comArr.push(ingArr[0]);   
+            }
+            //다리를 건넜으니 다리를 건너는 트럭배열에서 첫번째 값 제거
+            ingArr.shift();
+            
+            //다리를 건너고 있는 트럭무게와 대기중인 첫번째 트럭무게의 합이 weight 보다 작거나 같을경우
+            //대기중인 첫번째 트럭이 다리를 건넘
+            if(ingArr.reduce((a, b) => a + b)+truck_weights[0] <= weight){
+                ingArr.push(truck_weights[0]);
+                truck_weights.shift();
+            }else{
+                ingArr.push(0);
+            }
+        }
+        answer += 1;
+    }
+    return answer;
+}
+```
 
 
 <br/>

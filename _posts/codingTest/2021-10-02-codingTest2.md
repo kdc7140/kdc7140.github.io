@@ -35,15 +35,16 @@ tags:
 <br/>
 **** 작성코드****
 
-    function solution(a, b) {
-        var week = ['FRI','SAT','SUN','MON','TUE','WED','THU'];     //요일배열
-        var lastDate = [31,29,31,30,31,30,31,31,30,31,30,31];       //각 월의 마지막날 배열
+```java
+function solution(a, b) {
+    var week = ['FRI','SAT','SUN','MON','TUE','WED','THU'];     //요일배열
+    var lastDate = [31,29,31,30,31,30,31,31,30,31,30,31];       //각 월의 마지막날 배열
 
-        var answer = week[(lastDate.slice(0,a-1).reduce((x,y) => x + y, 0) +b-1) %7];
+    var answer = week[(lastDate.slice(0,a-1).reduce((x,y) => x + y, 0) +b-1) %7];
 
-        return answer;
-    }
-
+    return answer;
+}
+```
 
 <br/>
 **** 코드 풀이 ****
@@ -60,13 +61,15 @@ b-1을 하는 이유는 week 배열의 원소를 찾아야 하므로 배열의 �
 
 직접 월의 마지막 날을 선언하지 않고 Script에서 제공하는 Date()를 사용해서 풀어볼 수 있는데
 
-    function solution(a, b) {
-        var week = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+```java
+function solution(a, b) {
+    var week = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
 
-        var answer = week[new Date(`2016-${a}-${b}`).getDay()];
+    var answer = week[new Date(`2016-${a}-${b}`).getDay()];
 
-        return answer;
-    }
+    return answer;
+}
+```
 
 getDay() 함수는 요일을 구할 때 많이 사용하고 일요일~토요일 순서로 0~6의 숫자를 반환한다.
 이 함수를 사용할 때는 0이 일요일이므로 week 배열의 시작이 'FRI'가 아닌 'SUN'이라는 점에 주의하자.

@@ -49,6 +49,7 @@ tags:
 <br/>
 ****작성 코드****
 
+```java
     function solution(array, commands) {
       var answer = [];      //정답배열
       var sArr = [];        //i~j까지 자르고 정렬할 배열
@@ -75,7 +76,7 @@ tags:
       }
       return arr;
     }
-
+```
     
 
 <br/><br/>
@@ -87,17 +88,19 @@ slice() 함수를 이용하여 i~j까지 자르고 정렬한 배열을 sArr에 �
 
 위 풀이와 같이 숫자를 정렬하는 함수를 직접 만들수도 있지만 Script에서 제공하는 sort() 함수를 사용하여 아래와 같이 더 간단하게 작성할 수 있다.
 
-    function solution(array, commands) {
-      var answer = [];
-      var sArr = [];
-      
-      for(var i=0; i<cArr.length; i++){
-          sArr = array.slice(commands[i][0]-1,commands[i][1]).sort(function(a,b){return a - b});
-          answer.push(sArr[commands[i][2]-1]);
-      }
-      
-      return answer;
-    }
+```java
+function solution(array, commands) {
+  var answer = [];
+  var sArr = [];
+  
+  for(var i=0; i<cArr.length; i++){
+      sArr = array.slice(commands[i][0]-1,commands[i][1]).sort(function(a,b){return a - b});
+      answer.push(sArr[commands[i][2]-1]);
+  }
+  
+  return answer;
+}
+```
 
 sort(function(a,b,){reuturn a-b})로 사용해야하는 이유는 sort() 함수는 유니코드 순서에 따라 값을 정렬하기 때문에 숫자를 정렬할 때 2,3 보다 10, 11이 먼저 정렬된다. 따라서, 유니코드 순이 아닌 1,2,3... 숫자의 순서대로 정렬하기 위함이다.
 
