@@ -1,7 +1,7 @@
 ---
 title: "Program Guide"
 layout: archive
-permalink: categories/Guide
+permalink: categories/guide
 author_profile: true
 sidebar_main: true
 ---
