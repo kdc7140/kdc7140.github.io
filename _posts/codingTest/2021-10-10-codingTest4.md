@@ -95,6 +95,7 @@ function solution(bridge_length, weight, truck_weights) {
 <br/>
 
 **** 코드풀이 ****
+
 <img src="/assets/images/ct_4.PNG"><br/><br/>
 
 이해를 돕기 위해 '입출력 예'에서 첫 번째 조건을 도식화 시켜봤다. 실제 truck_weight의 원소를 제거하진 않지만
