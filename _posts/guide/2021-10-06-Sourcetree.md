@@ -1,6 +1,8 @@
 ---
 title:  "[Git]소스트리(Sourcetree) 설치&메뉴 설명"
 excerpt: "[Git]소스트리(Sourcetree) 설치&메뉴 설명"
+toc : true
+toc_sticky : true
 
 categories:
   - Tool
