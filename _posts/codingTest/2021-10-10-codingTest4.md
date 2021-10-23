@@ -3,7 +3,7 @@ title:  "다리를 지나는 트럭"
 excerpt: "프로그래머스 - 코딩테스트 연습 - 연습문제"
 
 categories:
-  - codingTest
+  - JavaScript
 tags: 
   - javaScript
   - algorithm 

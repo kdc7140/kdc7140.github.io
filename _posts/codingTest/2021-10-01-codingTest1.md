@@ -3,7 +3,7 @@ title:  "K번째수 구하기"
 excerpt: "프로그래머스 - 코딩테스트 연습 - 정렬"
 
 categories:
-  - codingTest
+  - JavaScript
 tags: 
   - javaScript
   - algorithm 
