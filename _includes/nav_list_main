@@ -34,14 +34,14 @@
         <ul>
             {% for category in site.categories %}
                 {% if category[0] == "JavaScript" %}
-                    <li><a href="/categories/JavaScript" class="">Coding Test ({{category[1].size}})</a></li>
+                    <li><a href="/categories/JavaScript" class="">JavaScript ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
         <ul>
             {% for category in site.categories %}
                 {% if category[0] == "Kotlin" %}
-                    <li><a href="/categories/Kotlin" class="">Coding Test ({{category[1].size}})</a></li>
+                    <li><a href="/categories/Kotlin" class="">Kotlin ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
