@@ -13,6 +13,8 @@
     {% endif %}
 
     {% unless site.atom_feed.hide %}
+      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ 'https://github.com/kdc7140' | relative_url }}{% endif %}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> {{ Github | default: "Github" }}</a></li>
+
       <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
     {% endunless %}
   </ul>
