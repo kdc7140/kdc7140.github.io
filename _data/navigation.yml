@@ -3,7 +3,7 @@ main:
   - title : 'Menu'
     url : /index/
   - title: "About"
-    url: https://www.notion.so/KIM-Dongchang-ddaa0bb743c84ab4a14b37391da7b838
+    url: https://bumpy-frown-eed.notion.site/KIM-Dongchang-ddaa0bb743c84ab4a14b37391da7b838
   - title: "Docs"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
