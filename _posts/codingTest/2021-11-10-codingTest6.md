@@ -48,3 +48,45 @@ tags:
 
 예제 #2
 3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
+
+<br/>
+
+### ** 작성코드 **
+
+```kotlin
+class Solution {
+    fun solution(n: Int, lost: IntArray, reserve: IntArray): Int {
+        var answer = n
+
+        //여분의 체육복이 있는 사람이 체육복을 잃어버렸을 경우 제거
+        var lostSet = lost.toSet() - reserve.toSet()
+        var reserveSet = (reserve.toSet() - lost.toSet()) as MutableSet
+
+        //체육복을 잃어버린 사람의 앞뒷사람이 여분의 체육복을 가지고 있는경우
+        for (item in lostSet) {
+            when {
+                item - 1 in reserveSet -> reserveSet.remove(item - 1)
+                item + 1 in reserveSet -> reserveSet.remove(item + 1)
+                else -> answer--
+            }
+        }
+        
+        return answer
+    }
+}
+```
+
+<br/>
+
+### ** 코드풀이 **
+
+배열의 값을 넣고 빼기 위해 array -> set 으로 변경 하고, 
+체육복을 도난당한 당사자가 여분이 있을 수 있는 경우를 제외하여
+lost, reserve를 생성한다.<br/>
+
+본인이 잃어버린 경우를 제외 했으므로 잃어버린 사람의 앞, 뒤 사람이 여분의 체육복이 있는지 확인해야하는데
+비교 순서는 앞사람 -> 뒷사람 순서로 진행해야 한다.<br/>
+뒷사람에게 먼저 빌릴 경우 lost = [2,4], reserve = [1,3] 케이스를 보면 2번이 3번에게 체육복을 빌려
+4번이 체육복을 입을 수 없게 된다.<br/>
+
+따라서 앞사람에게 먼저 빌리도록 하고 마지막까지 빌리지 못한 lostSet의 사람수 만큼 전체 사람수인 n에서 빼준다.
