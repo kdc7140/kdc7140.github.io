@@ -3,9 +3,9 @@ title:  "시저암호"
 excerpt: "프로그래머스 - 연습문제 - 시저암호"
 
 categories:
-  - Kotlin
+  - JavaScript
 tags: 
-  - Kotlin
+  - JavaScript
   - algorithm 
   - programers
   - codeingTest
@@ -33,3 +33,37 @@ tags:
 |"AB"|1|"BC"|
 |"z"|1|"a"|
 |"a B z"|4|"e F d"|
+
+
+<br/>
+
+**** 작성 코드 ****
+
+```kotlin
+function solution(s, n) {
+    var answer = '';
+    //a-z : 97-122 / A-Z : 65-90
+    
+    answer = s.split("").map((el) => {
+        var uni = 0;
+        if(el.charCodeAt() == 32){
+            uni = 32;
+        }else if(el.charCodeAt()+n > 122){
+            uni = el.charCodeAt()+n-26;
+        }else if(el.charCodeAt() <= 90 && el.charCodeAt()+n > 90 ){
+            uni = el.charCodeAt()+n-26;
+        }else{
+            uni =  el.charCodeAt()+n;
+        }
+        
+        return String.fromCharCode(parseInt(uni));
+    }).join("");
+    return answer;
+}
+```
+
+
+<br/>
+
+**** 코드 풀이 ****
+
