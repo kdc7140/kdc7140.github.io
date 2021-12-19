@@ -84,7 +84,7 @@ s는 알파벳 소문자, 대문자, 공백으로 이루어져 있고 z를 1만�
 모든 값의 계산이 끝나면 fromCharCode를 통해 아스키코드를 문자열로 반환하고 join을 사용하여
 배열을 문자열형태로 변경하여 반환한다.
 
-아스키코드를 사용하지 않고 풀어볼 수 있을 것 같은데, 다음에 도전해봐야겠다.
+~~아스키코드를 사용하지 않고 풀어볼 수 있을 것 같은데, 다음에 도전해봐야겠다.~~
 
 
 
@@ -107,15 +107,20 @@ function solution(s, n) {
             continue;
         }
 
-        var textArr = upper.includes(text) ? upper : lower;
-        var index = textArr.indexOf(text)+n;
+        var stringTxt = upper.includes(text) ? upper : lower;
+        var idx = stringTxt.indexOf(text)+n;
         
-        if(index >= textArr.length){
-            index -= textArr.length;
+        if(idx >= stringTxt.length){
+            idx -= stringTxt.length;
         }
             
-        answer += textArr[index];
+        answer += stringTxt[idx];
     }
     return answer;
 }
 ```
+
+<br/>
+
+아스키 코드를 사용하지 않고 알파벳 대문자, 소문자를 문자열로 선언해서 푸는 방법이다.
+아스키 코드를 사용하지 않았을 뿐 코드가 돌아가는 로직 자체는 동일하다.
