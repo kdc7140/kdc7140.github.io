@@ -1,5 +1,5 @@
 ---
-title: "Study"
+title: "Study(React)"
 layout: archive
 permalink: categories/React
 author_profile: true

@@ -1,5 +1,5 @@
 ---
-title: "Study"
+title: "Study(Kotlin)"
 layout: archive
 permalink: categories/AOS
 author_profile: true
