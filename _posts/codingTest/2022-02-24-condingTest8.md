@@ -37,3 +37,34 @@ tags:
 |[6, 10, 2]|"6210"|
 |[3, 30, 34, 5, 9]|"9534330"|
 
+
+<br/>
+
+
+**** 작성 코드 ****
+
+```javascript
+function solution(numbers) {
+    var answer = [];
+    
+    answer = numbers.sort(function(x,y){
+        var e = Number(String(x)+String(y));
+        var q = Number(String(y)+String(x));
+
+        return q-e
+
+    }).join('');
+    
+    return answer;
+}
+```
+
+
+<br/>
+
+**** 코드 풀이 ****
+
+주어진 배열의 원소로 가장 큰 수를 만드는 문제인데 순서대로 앞, 뒤 원소를 합쳐서 크기 비교하여 
+오름차순으로 정렬하면 쉽게 풀리는 문제인 것 같다.
+1번+2번 순서의 원소를 더한 것과, 2번+1번 순서로 더한 수의 크기를 비교해서 오름차순으로 정렬한 배열을
+join()을 사용하여 배열을 문자열로 변경해주면 된다.
