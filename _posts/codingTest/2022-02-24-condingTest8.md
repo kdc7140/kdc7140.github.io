@@ -68,3 +68,20 @@ function solution(numbers) {
 오름차순으로 정렬하면 쉽게 풀리는 문제인 것 같다.
 1번+2번 순서의 원소를 더한 것과, 2번+1번 순서로 더한 수의 크기를 비교해서 오름차순으로 정렬한 배열을
 join()을 사용하여 배열을 문자열로 변경해주면 된다.
+
+
+<br/>
+
+
+```javascript
+function solution(numbers) {
+    let answer = numbers.sort((a, b) => `${b}${a}` - `${a}${b}`).join('');
+    return answer[0] === '0' ? '0' : answer;
+}
+```
+
+<br/>
+
+위에 짠 코드와 맥락은 같지만 {}를 이용해서 좀 더 깔끔하게 짠 코드가 있어 가져와봤다.
+String으로 형변환하지 않고 {}를 이용해 인자를 바로 받고 정렬 후 join()을 사용해서 배열을 문자열로 바꿔준다.
+
