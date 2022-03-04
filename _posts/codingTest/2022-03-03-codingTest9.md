@@ -101,3 +101,7 @@ function solution(answers) {
     return answer;
 }
 ```
+
+
+수포자들의 찍는 방식을 각 배열로 만든다. answers와 찍는 방식의 배열을 비교해서 맞춘 개수를 저장하고
+각 맞춘개수를 비교해서 가장 많이 맞춘 수포자를 리터한다.
