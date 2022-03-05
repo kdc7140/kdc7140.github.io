@@ -55,47 +55,21 @@ tags:
 ```javascript
 function solution(answers) {
     var answer = [];
-    var ansArr = [[1,2,3,4,5], [2,1,2,3,2,4,2,5], [3,3,1,1,2,2,4,4,5,5]];
-    var ansIdx1 = 0, ansIdx2 = 0, ansIdx3 = 0;
+    var ansArr1 = [1,2,3,4,5];
+    var ansArr2 = [2,1,2,3,2,4,2,5];
+    var ansArr3 = [3,3,1,1,2,2,4,4,5,5];
     var supo = [0,0,0];
     
     for(var i=0; i<answers.length; i++){
-        if(ansIdx1 == ansArr[0].length){
-            ansIdx1 = 0;
-        }
-        if(answers[i] ==  ansArr[0][ansIdx1]){
-            supo[0] += 1;
-        }
-        ansIdx1 += 1;
-        
-        if(ansIdx2 == ansArr[1].length){
-            ansIdx2 = 0;
-        }
-        if(answers[i] ==  ansArr[1][ansIdx2]){
-            supo[1] += 1;
-        }
-        ansIdx2 += 1;
-        
-        if(ansIdx3 == ansArr[2].length){
-            ansIdx3 = 0;
-        }
-        if(answers[i] ==  ansArr[2][ansIdx3]){
-            supo[2] += 1;
-        }
-        ansIdx3 += 1;
+        answers[i] == ansArr1[i % ansArr1.length] ? supo[0] += 1 : "";
+        answers[i] == ansArr2[i % ansArr2.length] ? supo[1] += 1 : "";
+        answers[i] == ansArr3[i % ansArr3.length] ? supo[2] += 1 : "";
     }
     
-    if(supo[0] == supo[1] && supo[1] == supo[2]){
-        answer = [1,2,3];
-    }else if(supo[0] == supo[1] && supo[2] < supo[1]){
-        answer = [1,2];
-    }else if(supo[0] == supo[2] && supo[1] < supo[2]){
-        answer = [1,3];
-    }else if(supo[1] == supo[2] && supo[0] < supo[2]){
-        answer = [2,3];
-    }else{
-        answer = supo[0] < supo[1] ? (supo[1] < supo[2] ? [3] : [2])
-        : (supo[0] < supo[2] ? [3] : [1]);
+    var maxCnt = Math.max(supo[0],supo[1],supo[2]);
+    
+    for(var i=0; i<supo.length; i++){
+        supo[i] == maxCnt ? answer.push(i+1) : "";
     }
     
     return answer;
@@ -103,5 +77,6 @@ function solution(answers) {
 ```
 
 
-수포자들의 찍는 방식을 각 배열로 만든다. answers와 찍는 방식의 배열을 비교해서 맞춘 개수를 저장하고
-각 맞춘개수를 비교해서 가장 많이 맞춘 수포자를 리터한다.
+수포자들의 찍는 방식을 각 배열로 만든다. 정답인 answers와 수포자들의 찍는 방식 배열을 비교해서 맞춘 개수를 누적해서 더하고
+가장 많이 맞춘 개수를 maxCnt에 저장한다.
+그리고 수포자들이 맞춘 갯수와 maxCnt가 같으면 answer에 카운트를 누적해서 더하고 리턴한다.
