@@ -14,12 +14,12 @@ tags:
 
 <br/>
 
-Mac에서 오류 ruby를 설치하다보면 아래와 같이 Gem::FilePermissionError가 발생할 때가 있다.
+Mac에서 오류 ruby를 설치하다보면 아래와 같이 Gem::FilePermissionError가 발생할 때가 있습니다.
 
     ERROR:  While executing gem ... (Gem::FilePermissionError)
     You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory.
 
-권한이 없어 gem 설치가 되지 않는다는 것인데 system이 ruby를 사용하고 있기 때문이다.
+권한이 없어 gem 설치가 되지 않는다는 것인데 system이 ruby를 사용하고 있기 때문인데,
 
 오늘은 rbenv를 사용해서 에러를 해결해보겠습니다.
 
@@ -69,12 +69,13 @@ brew 명령어를 사용할 수 없다면 HomeBrew를 우선 적으로 설치해
     * system (set by /Users/dongchangkim/.rbenv/version)
       3.1.2
 
+<br/>
 3.1.2 버전의 설치가 완료 되었지만 여전히 system이 선택되어 있습니다.
-
 아래 명령어를 통해 대표 버전을 설치한 최신버전으로 변경해줍니다.
 
     $ rbenv global 3.1.2
 
+<br/>
 변경 하고 나면 3.1.2가 선택되어 있는 모습을 볼 수 있습니다.
 
 <br/>
@@ -85,15 +86,37 @@ brew 명령어를 사용할 수 없다면 HomeBrew를 우선 적으로 설치해
 
     $ vim ~/.zshrc
 
-
-그리고 아래 두줄을 추가 해줍니다.
+<br/>
+vim 에디터에서 i를 눌러 insert Mode에 진입하고 아래 두줄을 추가 해줍니다.
 
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
 
+<br/>
+코드 추가 이후 esc를 눌러 normal 모드로 변경해 준 뒤 :wq 를 입력해서 저장 후 종료해줍니다.
 
-https://d-dual.tistory.com/8
+|명령어|내용|
+|-----|-----|
+| :q|종료|
+| :w|저장|
+| :wq|저장 후 종료|
+| :q!|저장하지 않고 종료|
+| :wq!|강제로 저장하고 종료|
+<br/>
 
+PATH를 설정하고 업데이트 한 내용을 적용하기 위해 source 명령어를 사용하고 flutter 명령어로 버전을 확인합니다.
+
+    $ source ~/.zshrc       //내용 적용
+    $ flutter --version     //버전확인
+
+<br/>
+정상적으로 버전이 나타나고 설정이 됐다면 아래 코드로 bundler를 설치합니다.
+
+    $ gem install bundler
+
+<br/>
+이 후 설치를 진행하다보면 뭐가 없다 뭘 해야한다 라고 나오는 경우가 있는데 시스템이 친절하게 
+어떤 명령어를 입력하라고 알려주니 그대로 따라하시면 정상적으로 설치가 가능합니다.
 
 
 
