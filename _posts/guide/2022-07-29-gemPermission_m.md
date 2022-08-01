@@ -37,7 +37,7 @@ brew 명령어를 사용할 수 없다면 HomeBrew를 우선 적으로 설치해
 [HomeBrew 설치하기](https://brew.sh/index_ko){:target="_blank"}
 
 
-//설치 이미지
+<img src="/assets/images/homebrew.PNG"><br/><br/>
 
 설치를 완료한 이후 명령어를 통해 정상적으로 설치했는지 버전을 확인해줍니다.
 
