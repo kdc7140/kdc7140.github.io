@@ -157,6 +157,32 @@ console.log("이름 : ${name}, 나이 : ${age}.");
 중간에 비어있는 인덱스가 있는 경우 해당 인덱스는 건너뛰고 처리된다.
 
 
+<br/>
+
+### 2-5. Spread(전개연산자)
+
+전개연산자는 배열의 요소나 객체를 나열할 수 있는 연산자로 전개 대상은 반드시 iterable객체여야 한다.
+
+```javascript
+  const arr1 = [1,2,3];
+  const arr2 = [4,5,6];
+
+  console.log(...arr1);               //result : 1 2 3;
+  console.log([...arr1,  ...arr2]);   //result : [1,2,3,4,5,6];
+
+  const obj1 = {1:"one", 2:"two"}
+  const obj2 = {3:"three", 4:"four"}
+
+  console.log(...obj1);     
+  //result : Uncaught TypeError: Found non-callable @@iterator
+  console.log({...obj1, ...obj2});    //result : {1: 'one', 2: 'two', 3: 'three', 4: 'four'}
+```
+
+
+
+
+
+
 
 https://jsdev.kr/t/es6/2944
 
