@@ -35,7 +35,7 @@ ES5와 ES6의 대표적인 차이점은 아래 목록과 같다. 하나하나 �
  * 클래스
 
 
-### 2-1. 변수 선언
+### 2.1 변수 선언
 
 ES5의 변수 선언은 오로지 var로 가능합니다. 재할당과 재선언에 자유로운 편이지만 호이스팅 문제가 있다.
 
@@ -44,7 +44,7 @@ ES5의 변수 선언은 오로지 var로 가능합니다. 재할당과 재선언
 하지만 ES6에서는 var의 유연한 특성으로 인해 발생할 수 있는 피해를 방지하기 위해 let과 const를 사용해서 변수를 선언할 수 있다
 
 
-#### 2-1-1. let
+#### 2.1.1. let
 
 let은 중복선언이 불가능하지만 재할당이 가능하다.
 
@@ -63,7 +63,7 @@ console.log(name);  //result : kkk
 단순히 값만 재할당하는 경우는 정상적으로 사용이 가능하다.
 
 
-#### 2-1-2. const
+#### 2.1.2 const
 
 const는 중복선언과 재할당이 모두 불가능하다.
 
@@ -88,7 +88,7 @@ const의 경우에도 역시 중복선언이 불가능하지만 let과 다르게
 <br/>
 
 
-### 2-2. 화살표 함수
+### 2.2 화살표 함수
 
 ES6부터 생긴 새로운 함수 선언방법이다.<br/> 화살표 함수의 특징은 일반적으로 함수의 자신을 호출하는 객체를 가리키는 dynamic this와 달리
 코드의 상위 스코프를 가리키는 lexical this를 가진다.
@@ -122,7 +122,7 @@ var text = {
 
 <br/>
 
-### 2-3. 템플릿 리터럴
+### 2.3 템플릿 리터럴
 
 백틱(`)을 사용해서 문자열을 표기하는 방법이다.<br/>
 문자열 안에 ${}를 사용해서 코드를 삽입할 수 있으며 이 자바스크립트 코드가 반환하는 값을 문자열에 
@@ -142,7 +142,7 @@ console.log("이름 : ${name}, 나이 : ${age}.");
 
 <br/>
 
-### 2-4. Destructuring(디스트럭처링)
+### 2.4 Destructuring(디스트럭처링)
 
 배열이나 객체에서 필요한 요소만 추출하여 할당하고 싶은 경우에 사용할 수 있다.
 
@@ -159,7 +159,7 @@ console.log("이름 : ${name}, 나이 : ${age}.");
 
 <br/>
 
-### 2-5. Spread(전개연산자)
+### 2.5 Spread(전개연산자)
 
 전개연산자는 배열의 요소나 객체를 나열할 수 있는 연산자로 전개 대상은 반드시 iterable객체여야 한다.
 
@@ -178,27 +178,34 @@ console.log("이름 : ${name}, 나이 : ${age}.");
   console.log({...obj1, ...obj2});    //result : {1: 'one', 2: 'two', 3: 'three', 4: 'four'}
 ```
 
+<br/>
 
+### 2.6 Class
 
+ES6에서 Class 문법이 추가 됐고, 기존의 protoType 기반으로 클래스를 생성하는 것 보다 간단하게 사용이 가능하다.
 
-
-
-
-https://jsdev.kr/t/es6/2944
-
-https://cocoder16.tistory.com/49
-
-https://s262701-id.tistory.com/115
-
-https://velog.io/@weffa/JavaScript-ES5%EC%99%80-ES6-%EC%B0%A8%EC%9D%B4
-
-
-function solution(arr) {
-    var answer = [];
-    
-    arr.splice(arr.indexOf(Math.min(...arr)), 1);
-    
-    answer = arr.length ? arr : [-1]
-    
-    return answer;
+```javascript
+//ES5 - prototype 기반
+var Add = function(arg1, arg2) {
+  this.arg1 = arg1;
+  this.arg2 = arg2;
 }
+Add.prototype.calc = function() {
+  return this.arg1 + "+" + this.arg2 + "=" + (this.arg1 + this.arg2);
+}
+var num = new Add(5,11);
+console.log(num.calc());    //result : 5+11=16
+
+//ES6
+class Add {
+  constructor(arg1, arg2) {
+    this.arg1 = arg1;
+    this.arg2 = arg2;
+  }
+  calc() {
+    return this.arg1 + "+" + this.arg2 + "=" + (this.arg1 + this.arg2);
+  }
+}
+let num = new Add(5, 11);
+console.log(num.calc());    //result : 5+11=16
+```
