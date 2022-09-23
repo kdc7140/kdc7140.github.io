@@ -209,3 +209,36 @@ class Add {
 let num = new Add(5, 11);
 console.log(num.calc());    //result : 5+11=16
 ```
+
+<br/>
+
+### 2.7 Loop(for/of)
+
+for/of 구조의 반복문으로 Array, Strig, Maps, NodeLists 등의 반복 가능한 데이터 구조르 반복할 수 있다.
+
+```javascript
+//arr loop sample
+const cars = ["Sonata", 'K5', 'Avante'];
+let text = "";
+
+for(let x of cars){
+  text += x + "/;
+}
+
+console.log(num);     //result : Sonata/K5/Avante/
+
+
+//string loop sample
+let language = "ES6";
+let text = "";
+
+for(let x of language){
+  text = x + " ";
+}
+
+console.log(text);   //result : E S 6
+```
+
+
+
+
