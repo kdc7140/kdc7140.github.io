@@ -17,10 +17,14 @@ tags:
 
 <br/>
 
-## 1. src > res > xml 폴더에 network_security_config.xml 파일을 생성한다.
+## 1. 파일 생성
+
+src > res > xml 경로에 network_security_config.xml 파일을 생성한다.
+
+<br/>
 
 
-## 2. 아래와 같이 코드를 입력한다.
+## 2. http 통신 허용 코드 입력
 
 ```java
 <?xml version="1.0" encoding="utf-8"?>
@@ -33,8 +37,12 @@ tags:
 </network-security-config>
 ```
 
+<br/>
 
-## 3. AndroidManifest에서 <application></application> 영역에 아래 코드를 입력한다.
+
+## 3. Manifest 설정
+
+AndroidManifest에서 <application></application> 영역에 아래 코드를 입력한다.
 
 ```java
 android:networkSecurityConfig="@xml/network_security_config"
