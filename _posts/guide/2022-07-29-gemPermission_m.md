@@ -2,6 +2,9 @@
 title:  "Mac에서 Gem::FilePermissionError 해결 방법"
 excerpt: "오류 해결 방법"
 
+toc : true
+toc_sticky : true
+
 categories:
   - Error
 tags: 
