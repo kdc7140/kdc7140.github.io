@@ -5,7 +5,7 @@ toc : true
 toc_sticky : true
 
 categories:
-  - Error
+  - Tool
 tags: 
   - Sourcetree
   - Git GUI
