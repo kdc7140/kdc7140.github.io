@@ -6,7 +6,7 @@ toc : true
 toc_sticky : true
 
 categories:
-  - Guide
+  - Error
 tags: 
   - ruby 
   - gem
