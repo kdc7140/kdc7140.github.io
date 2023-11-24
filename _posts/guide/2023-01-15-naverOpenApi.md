@@ -1,5 +1,5 @@
 ---
-title:  "Vue.js에서 Naver Open API 영화검색 사용하기"
+title:  "[Vue.js] Vue.js에서 Naver Open API 영화검색 사용하기"
 excerpt: "open api 사용"
 
 toc : true
