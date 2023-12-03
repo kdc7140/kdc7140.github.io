@@ -13,8 +13,6 @@ tags:
 
 
 <br/>
-안녕하세요 **모야**입니다.
-
 오늘은 Git GUI 중의 하나인 SourceTree를 설치해보고 구성에대해 간단히 설명해보도록 하겠습니다.
 
 GUI(Graphical User Interface)란 누구나 이해하기 쉽도록 프로젝트 히스토리를 시각적으로 나타내주는 도구입니다.
